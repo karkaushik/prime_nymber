@@ -1,0 +1,179 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNJKCuAaPtBr/A8C4ABnAKB",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/karkaushik/prime_nymber/blob/main/pime_modification\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Prime number"
+      ],
+      "metadata": {
+        "id": "qdd9Wqxs3wf-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "PXPtXItaxeQi"
+      },
+      "outputs": [],
+      "source": [
+        "# take any number and code whether it is prime or not\n",
+        "\n",
+        "#1 is not a prime number\n",
+        "#when we take any number like 6 then write within range(2,6) then the value will be print as (6/2,6/3,6/4,6/5)\n",
+        "# if there is remainder then its prime \n",
+        "#if no remainder then its not prime and we dont want to check further for rest values so break will be used\n",
+        "#for example 6/2 has no remainder and u got sure that its not a prime number then if there is no 'break' statment then it will again print 6/3,6/4,6/5 whivh is \n",
+        "#not needed"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=7\n",
+        "\n",
+        "for i in range(2,num):\n",
+        "  if num%i==0:\n",
+        "    print(\"not prime\")\n",
+        "    break # we can use this break cause once we know that the number is not prime we will not check further for any value(for clearity take a non prime number)\n",
+        "\n",
+        "else:\n",
+        "  print(\"prime\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "drHKNZivxfcf",
+        "outputId": "dd11b683-64f5-4fb6-9e6a-a96a8018c860"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "not prime\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#take an non prime number to see the difference between break\n",
+        "\n",
+        "num=10\n",
+        "\n",
+        "for i in range(2,num):\n",
+        "  if num%i==0:\n",
+        "    print(\"not prime\")\n",
+        "    break \n",
+        "\n",
+        "else:\n",
+        "  print(\"prime\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P0-opOc0yCN7",
+        "outputId": "cdedac81-ad7b-4aca-b9ae-fd22b1a031e5"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "not prime\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# now find out the prime number with in a range \n",
+        "# using loop\n",
+        "\n",
+        "n1=int(input(\"enter the number:\"))\n",
+        "n2=int(input(\"enter the number:\"))\n",
+        "\n",
+        "for i in range(n1,n2+1):\n",
+        "  flag=0\n",
+        "  for j in range(2,i):\n",
+        "    if i%j==0:\n",
+        "      flag=1\n",
+        "      break\n",
+        "  if (flag==0):\n",
+        "    print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4yrvqjiX0Vpt",
+        "outputId": "fabcb360-75c9-449e-f477-6ef5b0ade3a4"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number:1\n",
+            "enter the number:23\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "7\n",
+            "11\n",
+            "13\n",
+            "17\n",
+            "19\n",
+            "23\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# how to make a generator to produce first N prime numbers\n"
+      ],
+      "metadata": {
+        "id": "b0FMlgIf-Dee"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
